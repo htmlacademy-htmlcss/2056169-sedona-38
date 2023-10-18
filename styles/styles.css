@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+.page {
+  height: 100%;
+  background: #f2f2f2;
+}
+
+.page__body {
+  background: #ffffff;
+  color: #333333;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 21px;
+  font-weight: 400;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.button {
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.main-nav__list {
+  list-style: none;
+  color: #000000;
+}
+
+.header-list__item {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.header-list__button {
+  background-color: #756157;
+}
+
+.intro {
+  background-image: url("../images/index-img/white-line.svg"), url("../images/index-img/index-intro.jpg");
+  height: 485px;
+  background-repeat: no-repeat;
+  background-color: #34495dbf;
+  background-size: 101% auto;
+  background-position: bottom;
+}
+
+.advantages__important-description {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.advantages__description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.advantages__list {
+  list-style: none;
+}
+
+.advantages__item--big {
+  background-color: #82B3D3;
+  color: #ffffff;
+}
+
+.advantages__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.search-hotel__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.search-hotel__description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.search-hotel__button {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #756157;
+}
+
+.newsletter--background {
+  background-image: url("../images/index-img/newsletter-background.jpg");
+  height: 415px;
+  background-repeat: no-repeat;
+  background-color: #34495dbf;
+  background-size: cover;
+}
+
+.newsletter__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.newsletter__description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.newsletter__button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  background-color: #82B3D3;
+}
+
+.contacts__phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.main-container__background {
+  background-image: url("../images/catalog-img/filter-background.jpg");
+  height: 712px;
+  background-repeat: no-repeat;
+  background-color: #34495dbf;
+  background-size: cover;
+}
+
+.main-container__wrapper {
+  color: #ffffff;
+}
+
+.filter-header__title {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+.filter-header__breadcrumbs {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.breadcrumbs__link {
+  color: #ffffff;
+}
+
+.catalog-filter__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.control__label {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.price-range__input {
+  color: #000000;
+}
+
+.price-range__input--description {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.catalog-filter__apply-button {
+  background-color: #82B3D3;
+}
+
+.catalog-filter__reset-button {
+  background-color: transparent;
+}
+
+.catalog {
+  margin-top: 200px;
+}
+
+.catalog__offers-found {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.product__card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.product__card-more {
+  background-color: #756157;
+}
+
+.product__card-button {
+  background-color: #82B3D3;
+}
+
+.product__card-button--current {
+  background-color: #7DB54F;
+}
+
+.product__rating-number {
+  font-weight: 400;
+  background-color: #F2F2F2;
+}
+
+.pagination__link{
+  padding: 12px, 24px;
+  background-color: #82B3D3;
+  color: #ffffff;
+}
+
+.pagination__link--current {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.pagination__link--more {
+  background-color: #ffffff;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+}
