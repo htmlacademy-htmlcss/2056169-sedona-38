@@ -168,12 +168,17 @@ a {
 }
 
 .filter-header__breadcrumbs {
+  list-style: none;
   font-size: 16px;
   line-height: 21px;
 }
 
 .breadcrumbs__link {
   color: #ffffff;
+}
+
+.catalog-filter__list {
+  list-style: none;
 }
 
 .catalog-filter__title {
@@ -216,6 +221,10 @@ a {
   text-transform: uppercase;
 }
 
+.product__list {
+  list-style: none;
+}
+
 .product__card-title {
   font-size: 24px;
   font-weight: 700;
@@ -239,6 +248,10 @@ a {
   background-color: #F2F2F2;
 }
 
+.pagination__list {
+  list-style: none;
+}
+
 .pagination__link{
   padding: 12px, 24px;
   background-color: #82B3D3;
@@ -255,4 +268,8 @@ a {
   font-size: 22px;
   line-height: 26px;
   color: #000000;
+}
+
+.main-footer__list {
+  list-style: none;
 }
