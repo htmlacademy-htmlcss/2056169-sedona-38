@@ -20,6 +20,10 @@
 }
 
 .page__body {
+  margin: 0 auto;
+  width: 1200px;
+
+  font-family: "PT Sans";
   background: #ffffff;
   color: #333333;
   font-size: 18px;
@@ -44,12 +48,33 @@ a {
   line-height: 20px;
 }
 
+.main-header {
+  display: flex;
+  margin: 0 auto;
+  width: 1060px;
+}
+
+.main-nav {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  width: 892px;
+}
+
+.header-list {
+  display: flex;
+  margin: 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .main-nav__list {
   list-style: none;
   color: #000000;
 }
 
 .header-list__item {
+  padding: 20px 16px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -60,13 +85,24 @@ a {
 }
 
 .intro {
+  display: flex;
+  justify-content: center;
   background-image: url("../images/index-img/white-line.svg"), url("../images/index-img/index-intro.jpg");
   height: 485px;
   background-repeat: no-repeat;
   background-color: #34495dbf;
-  background-size: 101% auto;
+  background-size: 102% auto;
   background-position: bottom;
 }
+
+.intro__image {
+  padding-top: 52px;
+}
+
+.advantages {
+  text-align: center;
+}
+
 
 .advantages__important-description {
   font-size: 30px;
@@ -83,11 +119,26 @@ a {
 
 .advantages__list {
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
 }
 
 .advantages__item--big {
+  display: flex;
+  flex-direction: row;
   background-color: #82B3D3;
   color: #ffffff;
+  width: 1200px;
+  grid-column: 1 / -1;
 }
 
 .advantages__title {
@@ -95,6 +146,10 @@ a {
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
+}
+
+.search-hotel {
+  text-align: center;
 }
 
 .search-hotel__title {
@@ -115,12 +170,18 @@ a {
   background-color: #756157;
 }
 
+.newsletter {
+  text-align: center;
+  color: #000000;
+}
+
 .newsletter--background {
   background-image: url("../images/index-img/newsletter-background.jpg");
   height: 415px;
   background-repeat: no-repeat;
   background-color: #34495dbf;
   background-size: cover;
+  color: #ffffff;
 }
 
 .newsletter__title {
@@ -142,6 +203,20 @@ a {
   background-color: #82B3D3;
 }
 
+.main-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1060px;
+  margin: 0 auto;
+  padding-top: 29px;
+  margin-bottom: 30px;
+}
+
+.social {
+  display: flex;
+}
+
 .contacts__phone {
   font-size: 40px;
   line-height: 40px;
@@ -158,6 +233,12 @@ a {
 
 .main-container__wrapper {
   color: #ffffff;
+  height: 412px;
+}
+
+.filter-header {
+  display: flex;
+  flex-direction: column;
 }
 
 .filter-header__title {
@@ -165,6 +246,7 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: 78px;
+  margin: 0;
 }
 
 .filter-header__breadcrumbs {
@@ -173,8 +255,16 @@ a {
   line-height: 21px;
 }
 
+.breadcrumbs {
+  display: flex;
+}
+
 .breadcrumbs__link {
   color: #ffffff;
+}
+
+.catalog-filter__form {
+  display: flex;
 }
 
 .catalog-filter__list {
@@ -202,6 +292,16 @@ a {
   line-height: 24px;
 }
 
+.catalog {
+  margin: 0 auto;
+  width: 1060px;
+}
+
+.catalog-filter__button {
+  display: flex;
+  flex-direction: column;
+}
+
 .catalog-filter__apply-button {
   background-color: #82B3D3;
 }
@@ -210,8 +310,11 @@ a {
   background-color: transparent;
 }
 
-.catalog {
-  margin-top: 200px;
+.catalog__search {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .catalog__offers-found {
@@ -222,6 +325,14 @@ a {
 }
 
 .product__list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  list-style-type: none;
+  margin: 0 auto;
+  width: 1056px;
+  margin-bottom: 66px;
+  padding: 0;
+  column-gap: 18px;
   list-style: none;
 }
 
@@ -229,6 +340,15 @@ a {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+}
+
+.product__card-wrapper {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  margin: 16px 20px 20px;
+  row-gap: 16px;
+  column-gap: 20px;
+  word-wrap: break-word;
 }
 
 .product__card-more {
@@ -250,6 +370,9 @@ a {
 
 .pagination__list {
   list-style: none;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination__link{
