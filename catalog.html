@@ -11,6 +11,7 @@
         <img class="logo__image" src="images/header-img/logo.svg" height="70" width="140" alt="Логотип Седоны">
       </a>
       <nav class="main-nav">
+
         <ul class="main-nav__list header-list">
           <li class="header-list__item">
             <a class="header-list__link" href="index.html">Главная</a>
@@ -22,30 +23,32 @@
             <a class="header-list__link">Гостиницы</a>
           </li>
         </ul>
-        <ul class="main-nav__list header-list">
+
+        <ul class="main-nav__list main-nav__icon-list header-list">
           <li class="header-list__item">
-            <a class="header-list__link" href="#">
+            <a class="header-list__link search-icon" href="#">
               <span class="visually-hidden">
                 Поиск
               </span>
             </a>
           </li>
           <li class="header-list__item">
-            <a class="header-list__link" href="#">
-              <div class="header-list__catalog-item">12</div>
+            <a class="header-list__link favorites-icon" href="#">
+              <span class="header-list__catalog-item">12</span>
               <span class="visually-hidden">
                 Корзина
               </span>
             </a>
           </li>
-          <li class="header-list__item">
-            <button class="button header-list__button" type="button">Хочу сюда!</button>
-          </li>
         </ul>
+
+        <div class="header-list__button-wrapper">
+          <button class="button header-list__button" type="button">Хочу сюда!</button>
+        </div>
       </nav>
     </header>
     <main class="main-container">
-      <div class="main-container__wrapper main-container__background">
+      <div class="main-container__wrapper">
         <header class="filter-header">
           <h1 class="filter-header__title">Гостиницы Седоны</h1>
           <ul class="filter-header__breadcrumbs breadcrumbs">
@@ -63,28 +66,24 @@
         <section class="catalog-filter">
           <h2 class="visually-hidden">Список гостиниц с фильтрами.</h2>
           <form class="catalog-filter__form" action="https://echo.htmlacademy.ru/" method="get">
-
             <fieldset class="catalog-filter__group">
               <legend class="catalog-filter__title">Инфраструктура:</legend>
               <ul class="catalog-filter__list">
                 <li class="catalog-filter__item">
                   <label class="control">
-                    <input class="control__input visually-hidden" type="checkbox" name="Swimming-pool" checked>
-                    <span class="control__mark"></span>
+                    <input class="control__input visually-hidden" type="checkbox" name="pool" checked>
                     <span class="control__label">Бассейн</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
                   <label class="control">
                     <input class="control__input visually-hidden" type="checkbox" name="parking" checked>
-                    <span class="control__mark"></span>
                     <span class="control__label">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
                   <label class="control">
                     <input class="control__input visually-hidden" type="checkbox" name="wi-fi">
-                    <span class="control__mark"></span>
                     <span class="control__label">Wi-Fi</span>
                   </label>
                 </li>
@@ -96,45 +95,41 @@
               <ul class="catalog-filter__list">
                 <li class="catalog-filter__item">
                   <label class="control control--radio">
-                    <input class="control-input visually-hidden" type="radio" name="product-group" value="Hotel" checked>
-                    <span class="control-mark"></span>
-                    <span class="control-label">Гостиница</span>
+                    <input class="control__input visually-hidden" type="radio" name="product-group" value="Hotel" checked>
+                    <span class="control__label">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
                   <label class="control control--radio">
                     <input class="control__input visually-hidden" type="radio" name="product-group" value="Motel">
-                    <span class="control__mark"></span>
                     <span class="control__label">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
                   <label class="control control--radio">
                     <input class="control__input visually-hidden" type="radio" name="product-group" value="Apartments">
-                    <span class="control__mark"></span>
                     <span class="control__label">Апартаменты</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="catalog-filter__group catalog-filter--price">
               <legend class="catalog-filter__title">Стоимость, ₽:</legend>
 
               <div class="price-range">
                 <div class="price-range__wrapper">
                   <label class="price-range__label price-range__label--min">
-                    <input class="price-range__input" type="number" value="0" placeholder="0" min="0" name="min-price">
+                    <input class="field price-range__input" type="number" value="0" placeholder="0" min="0" name="min-price">
                     <span class="price-range__input--description">от</span>
                   </label>
                   <label class="price-range__label price-range__label--max">
-                    <input class="price-range__input" type="number" value="9000" placeholder="9000" min="0" name="max-price">
+                    <input class="field price-range__input" type="number" value="9000" placeholder="9000" min="0" name="max-price">
                     <span class="price-range__input--description">до</span>
                   </label>
                 </div>
 
                 <div class="range-scale range-scale--opacity">
-                  <div class="range-scale__wrapper">
+                  <div class="range-scale__wrapper" style="width: 208px">
                     <button class="range-scale__toggle range-scale__toggle--min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
@@ -145,8 +140,8 @@
                 </div>
               </div>
             </fieldset>
-            <div class="catalog-filter__button">
-              <button class="button catalog-filter__apply-button" type="submit">Применить</button>
+            <div class="catalog-filter__buttons">
+              <button class="button catalog-filter__apply-button apply-button" type="submit">Применить</button>
               <button class="button catalog-filter__reset-button" type="reset">Сбросить</button>
             </div>
           </form>
@@ -156,10 +151,12 @@
       <section class="catalog">
         <div class="catalog__search">
           <h2 class="catalog__offers-found"> Найдено гостиниц: 38</h2>
-          <select class="catalog__select-control" aria-label="Сортировка">
-            <option value="cheap">Сначала дешёвые</option>
-            <option value="expensive">Сначала дорогое</option>
-          </select>
+          <div class="catalog__select-wrapper">
+            <select class="select-control catalog__select-control" aria-label="Сортировка">
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогое</option>
+            </select>
+          </div>
 
           <p class="catalog__button">
             <a href="#" class="catalog__button-toggle catalog__button-toggle--current catalog__icon--table">
@@ -183,11 +180,11 @@
               </a>
               <div class="product__card-wrapper">
                 <p class="product__card-hotel">Гостиница</p>
-                <b class="product__card-price">От 4000 ₽</b>
+                <p class="product__card-price">От 4000 ₽</p>
                 <a class="button product__card-more" href="#">подробнее</a>
-                <button class="button product__card-button" type="button">в избранное</button>
+                <button class="button apply-button product__card-button" type="button">в избранное</button>
                 <p class="product__rating">
-                  <span class="product__rating--star"></span>
+                  <span class="product__rating--star product__rating--4-star"></span>
                   <span class="visually-hidden">4 звезды.</span>
                 </p>
                 <b class="product__rating-number">Рейтинг: 8,5</b>
@@ -201,11 +198,11 @@
               </a>
               <div class="product__card-wrapper">
                 <p class="product__card-hotel">Гостиница</p>
-                <b class="product__card-price">От 5000 ₽</b>
+                <p class="product__card-price">От 5000 ₽</p>
                 <a class="button product__card-more" href="#">подробнее</a>
-                <button class="button product__card-button product__card-button--current" type="button">в избранное</button>
+                <button class="button product__card-button product__card-button--current" type="button">в избранном</button>
                 <p class="product__rating">
-                  <span class="product__rating--star"></span>
+                  <span class="product__rating--star product__rating--4-star"></span>
                   <span class="visually-hidden">4 звезды.</span>
                 </p>
                 <b class="product__rating-number">Рейтинг: 9,2</b>
@@ -219,11 +216,11 @@
               </a>
               <div class="product__card-wrapper">
                 <p class="product__card-hotel">Гостиница</p>
-                <b class="product__card-price">От 2500 ₽</b>
+                <p class="product__card-price">От 2500 ₽</p>
                 <a class="button product__card-more" href="#">подробнее</a>
-                <button class="button product__card-button" type="button">в избранное</button>
+                <button class="button apply-button product__card-button" type="button">в избранное</button>
                 <p class="product__rating">
-                  <span class="product__rating--star"></span>
+                  <span class="product__rating--star product__rating--3-star"></span>
                   <span class="visually-hidden">3 звезды.</span>
                 </p>
                 <b class="product__rating-number">Рейтинг: 6,9</b>
@@ -237,11 +234,11 @@
               </a>
               <div class="product__card-wrapper">
                 <p class="product__card-hotel">Гостиница</p>
-                <b class="product__card-price">От 1500 ₽</b>
+                <p class="product__card-price">От 1500 ₽</p>
                 <a class="button product__card-more" href="#">подробнее</a>
-                <button class="button product__card-button" type="button">в избранное</button>
+                <button class="button apply-button product__card-button" type="button">в избранное</button>
                 <p class="product__rating">
-                  <span class="product__rating--star"></span>
+                  <span class="product__rating--star product__rating--2-star"></span>
                   <span class="visually-hidden">2 звезды.</span>
                 </p>
                 <b class="product__rating-number">Рейтинг: 5,0</b>
@@ -256,19 +253,19 @@
               <a class="pagination__link pagination__link--current">1</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">2</a>
+              <a class="apply-button pagination__link" href="#">2</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
+              <a class="apply-button pagination__link" href="#">3</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">4</a>
+              <a class="apply-button pagination__link" href="#">4</a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link pagination__link--more" href="#">...</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">10</a>
+              <a class="apply-button pagination__link" href="#">10</a>
             </li>
           </ul>
         </div>
@@ -285,30 +282,30 @@
           </label>
           <input class="field newsletter__field" placeholder="Ваш e-mail" type="email" name="newsletter__email"
             id="newsletter__email" required>
-          <button class="button newsletter__button" type="submit">Подписаться</button>
+          <button class="button apply-button newsletter__button" type="submit">Подписаться</button>
         </form>
       </section>
 
       <div class="main-footer__wrapper">
         <ul class="main-footer__list social">
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link social__link--vkontakte" href="#">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link social__link--telegram" href="#">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link social__link--youtube" href="#">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
         </ul>
         <div class="main-footer__contacts contacts">
-          <a class="contacts__phone " href="tel:+78128121212">+7 (812) 812-12-12</a>
+          <a class="contacts__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </div>
         <div class="main-footer__partner partner">
           <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive">
