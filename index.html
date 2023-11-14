@@ -47,14 +47,12 @@
         </div>
       </nav>
     </header>
-
     <main class="main-container">
-      <div class="intro">
+      <section class="intro">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
         <img class="intro__image" src="images/index-img/welcome.svg" height="352" width="458"
           alt="Welcome to the gorgeous sedona, because the grand canyon sucks!">
-      </div>
-
+      </section>
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
         <div class="advantages__titel-wrapper">
@@ -62,7 +60,6 @@
             большего!</b>
           <p class="advantages__description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
-
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--big">
             <div class="advantages__description-wrapper">
@@ -71,22 +68,18 @@
             </div>
             <img class="advantages__image" src="images/index-img/advantages-city.jpg" height="384" width="800" alt="Красивые здания в Седоне">
           </li>
-
           <li class="advantages__item">
             <h3 class="advantages__title">Небольшая <br> площадь</h3>
             <p class="advantages__item-description">Все достопримечательности <br> находятся очень близко</p>
           </li>
-
           <li class="advantages__item advantages__item--gray">
             <h3 class="advantages__title">Красивая <br> дорога</h3>
             <p class="advantages__item-description">Ехать в Седону из Лас-Вегаса <br> совсем не скучно!</p>
           </li>
-
           <li class="advantages__item">
             <h3 class="advantages__title">Мало <br> туристов</h3>
             <p class="advantages__item-description">Большинство едет в Гранд <br> Каньон и толпится там</p>
           </li>
-
           <li class="advantages__item advantages__item--big">
             <img class="advantages__image" src="images/index-img/advantages-bridge.jpg" height="384" width="800" alt="Скала в виде моста">
             <div class="advantages__description-wrapper">
@@ -95,15 +88,15 @@
             </div>
           </li>
         </ul>
-
+      </section>
+      <section class="advantages__service">
         <div class="advantages__recommendations">
           <b class="advantages__important-description">Приезжайте в Седону отдохнуть <br> в комфорте и уюте!</b>
           <p class="advantages__description advantages__recommendations-description">Опытный персонал и качественное обслуживание!</p>
         </div>
-
         <ul class="advantages__list advantages__list--service">
           <li class="advantages__recommendations-item advantages__item--housing">
-            <h3 class="advantages__title">Жилье</h3>
+            <h3 class="advantages__title">Жильё</h3>
             <p class="advantages__item-description">Рекомендуем пожить <br> в настоящем мотеле, <br> все как в кино!</p>
           </li>
           <li class="advantages__recommendations-item advantages__item--food">
@@ -118,16 +111,17 @@
         </ul>
       </section>
       <section class="search-hotel">
-        <h2 class="search-hotel__title">Заинтересовались?</h2>
-        <p class="search-hotel__description">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <div class="search-hotel__wrapper">
+          <h2 class="search-hotel__title">Заинтересовались?</h2>
+          <p class="search-hotel__description">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        </div>
         <button class="button search-hotel__button" type="button">Поиск гостиницы в Седоне</button>
       </section>
-    </main>
-
-    <footer class="main-footer">
       <section class="newsletter newsletter--background">
-        <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
-        <p class="newsletter__description">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
+        <div class="newsletter__wrapper">
+          <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
+          <p class="newsletter__description">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
+        </div>
         <form class="newsletter__form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="newsletter__email">
             <span class="visually-hidden">Email.</span>
@@ -137,7 +131,8 @@
           <button class="button apply-button newsletter__button" type="submit">Подписаться</button>
         </form>
       </section>
-
+    </main>
+    <footer class="main-footer">
       <div class="main-footer__wrapper">
         <ul class="main-footer__list social">
           <li class="social__item">
@@ -166,36 +161,35 @@
         </div>
       </div>
     </footer>
-    <div class="modal-container modal-close">
+    <div class="modal-container modal-container--close">
       <div class="modal">
         <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
-          <button class="modal__button--close" type="button">
-            <span class="visually-hidden">Закрыть окно</span>
-          </button>
-          <form action="https://echo.htmlacademy.ru/" method="get">
-            <div class="modal__field-group">
-              <label class="modal__search-label" for="checkin">
-                <span>Дата заезда:</span>
-              </label>
-              <span class="modal__place-wrapper">
-                <input class="field modal__search-date" id="checkin" name="checkin" type="text" placeholder="Укажите дату" maxlength="35" value="27 апреля 2020" required>
-                <span class="modal__alert modal__alert--error">Мы не можем отправить вас в прошлое.</span>
-              </span>
-            </div>
-            <div class="modal__field-group">
-              <label class="modal__search-label" for="checkout">
-                <span>Дата выезда:</span>
-              </label>
-              <span class="modal__place-wrapper">
-                <input class="field modal__search-date" id="checkout" name="checkout" type="text" placeholder="Укажите дату" maxlength="35" value="1 сентября 2023" required>
-                <span class="modal__alert">На эти даты есть свободные номера. Пока есть.</span>
-              </span>
-            </div>
-            <div class="modal__field-group modal__field-group--count count-field-group">
-              <span class="modal__button-group">
-                <label class="modal__search-label" for="adults">
-                  <span>Взрослые:</span>
-                </label>
+        <button class="modal__button--close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          <div class="modal__field-group">
+            <label class="modal__search-label" for="checkin">
+              <span>Дата заезда:</span>
+            </label>
+            <span class="modal__place-wrapper">
+              <input class="field modal__search-date" id="checkin" name="checkin" type="text" placeholder="Укажите дату" maxlength="35" value="27 апреля 2020" required>
+              <span class="modal__alert modal__alert--error">Мы не можем отправить вас в прошлое.</span>
+            </span>
+          </div>
+          <div class="modal__field-group">
+            <label class="modal__search-label" for="checkout">
+              <span>Дата выезда:</span>
+            </label>
+            <span class="modal__place-wrapper">
+              <input class="field modal__search-date" id="checkout" name="checkout" type="text" placeholder="Укажите дату" maxlength="35" value="1 сентября 2023" required>
+              <span class="modal__alert">На эти даты есть свободные номера. Пока есть.</span>
+            </span>
+          </div>
+          <div class="modal__field-group modal__field-group--count">
+            <span class="modal__button-group">
+              <label class="modal__search-label" for="adults">Взрослые:</label>
+              <div class="modal__button-wrapper">
                 <button class="button-less modal__button" type="button">
                   <span class="visually-hidden">Уменьшить число</span>
                 </button>
@@ -203,25 +197,26 @@
                 <button class="button-more modal__button" type="button">
                   <span class="visually-hidden">Увеличить число</span>
                 </button>
-              </span>
-              <span class="modal__button-group">
-                <label class="modal__search-label" for="children">
-                  <span>Дети:</span>
-                </label>
-                <button class="modal__info" type="button">
-                  <span class="modal__tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                </button>
-                <button class="button-less modal__button" type="button">
-                  <span class="visually-hidden">Уменьшить число</span>
-                </button>
-                <input class="field modal__count-input" id="children" name="children" type="number" placeholder="0" min="0" max="99" value="2" required>
-                <button class="button-more modal__button" type="button">
-                  <span class="visually-hidden">Увеличить число</span>
-                </button>
-              </span>
-            </div>
-            <button class="button apply-button modal__button--submit" type="submit">Найти</button>
-          </form>
+              </div>
+            </span>
+            <span class="modal__button-group">
+              <label class="modal__search-label" for="children">Дети:</label>
+              <button class="modal__info" type="button">
+                <span class="modal__tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </button>
+                <div class="modal__button-wrapper">
+                  <button class="button-less modal__button" type="button">
+                    <span class="visually-hidden">Уменьшить число</span>
+                  </button>
+                  <input class="field modal__count-input" id="children" name="children" type="number" placeholder="0" min="0" max="99" value="2" required>
+                  <button class="button-more modal__button" type="button">
+                    <span class="visually-hidden">Увеличить число</span>
+                  </button>
+                </div>
+            </span>
+          </div>
+          <button class="button apply-button modal__button--submit" type="submit">Найти</button>
+        </form>
       </div>
     </div>
   </body>

@@ -11,7 +11,6 @@
         <img class="logo__image" src="images/header-img/logo.svg" height="70" width="140" alt="Логотип Седоны">
       </a>
       <nav class="main-nav">
-
         <ul class="main-nav__list header-list">
           <li class="header-list__item">
             <a class="header-list__link" href="index.html">Главная</a>
@@ -41,7 +40,6 @@
             </a>
           </li>
         </ul>
-
         <div class="header-list__button-wrapper">
           <button class="button header-list__button" type="button">Хочу сюда!</button>
         </div>
@@ -53,7 +51,7 @@
           <h1 class="filter-header__title">Гостиницы Седоны</h1>
           <ul class="filter-header__breadcrumbs breadcrumbs">
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link breadcrumbs__link--home" href="index.html">
+              <a class="breadcrumbs__link" href="index.html">
                 <span class="visually-hidden">Главная</span>
               </a>
             </li>
@@ -62,7 +60,6 @@
             </li>
           </ul>
         </header>
-
         <section class="catalog-filter">
           <h2 class="visually-hidden">Список гостиниц с фильтрами.</h2>
           <form class="catalog-filter__form" action="https://echo.htmlacademy.ru/" method="get">
@@ -89,7 +86,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="catalog-filter__group">
               <legend class="catalog-filter__title">Тип жилья:</legend>
               <ul class="catalog-filter__list">
@@ -115,7 +111,6 @@
             </fieldset>
             <fieldset class="catalog-filter__group catalog-filter--price">
               <legend class="catalog-filter__title">Стоимость, ₽:</legend>
-
               <div class="price-range">
                 <div class="price-range__wrapper">
                   <label class="price-range__label price-range__label--min">
@@ -127,7 +122,6 @@
                     <span class="price-range__input--description">до</span>
                   </label>
                 </div>
-
                 <div class="range-scale range-scale--opacity">
                   <div class="range-scale__wrapper" style="width: 208px">
                     <button class="range-scale__toggle range-scale__toggle--min" type="button">
@@ -147,7 +141,6 @@
           </form>
         </section>
       </div>
-
       <section class="catalog">
         <div class="catalog__search">
           <h2 class="catalog__offers-found"> Найдено гостиниц: 38</h2>
@@ -157,20 +150,24 @@
               <option value="expensive">Сначала дорогое</option>
             </select>
           </div>
-
-          <p class="catalog__button">
-            <a href="#" class="catalog__button-toggle catalog__button-toggle--current catalog__icon--table">
-              <span class="visually-hidden">Показать карточки.</span>
-            </a>
-            <a href="#" class="catalog__button-toggle catalog__icon--slideshow">
-              <span class="visually-hidden">Показать ленту.</span>
-            </a>
-            <a href="#" class="catalog__button-toggle catalog__icon--list">
-              <span class="visually-hidden">Показать список.</span>
-            </a>
-          </p>
+          <ul class="catalog__button-list">
+            <li class="catalog__button-item">
+              <a href="#" class="catalog__button-toggle catalog__button-toggle--current catalog__icon--table">
+                <span class="visually-hidden">Показать карточки.</span>
+              </a>
+            </li>
+            <li class="catalog__button-item">
+              <a href="#" class="catalog__button-toggle catalog__icon--slideshow">
+                <span class="visually-hidden">Показать ленту.</span>
+              </a>
+            </li>
+            <li class="catalog__button-item">
+              <a href="#" class="catalog__button-toggle catalog__icon--list">
+                <span class="visually-hidden">Показать список.</span>
+              </a>
+            </li>
+          </ul>
         </div>
-
         <div class="product">
           <ul class="product__list">
             <li class="product__card">
@@ -190,7 +187,6 @@
                 <b class="product__rating-number">Рейтинг: 8,5</b>
               </div>
             </li>
-
             <li class="product__card">
               <a class="product__card-link" href="#">
                 <img class="product__card-image" src="images/catalog-img/poco-hotel.jpg" width="300" height="212" alt="Виллы в Поко Диабло.">
@@ -208,7 +204,6 @@
                 <b class="product__rating-number">Рейтинг: 9,2</b>
               </div>
             </li>
-
             <li class="product__card">
               <a class="product__card-link" href="#">
                 <img class="product__card-image" src="images/catalog-img/quail-hotel.jpg" width="300" height="212" alt="Гостиница Дезерт Квейл.">
@@ -226,7 +221,6 @@
                 <b class="product__rating-number">Рейтинг: 6,9</b>
               </div>
             </li>
-
             <li class="product__card">
               <a class="product__card-link" href="#">
                 <img class="product__card-image" src="images/catalog-img/green-tree-hotel.jpg" width="300" height="212" alt="Гостиница Гринтри.">
@@ -246,7 +240,6 @@
             </li>
           </ul>
         </div>
-
         <div class="pagination">
           <ul class="pagination__list">
             <li class="pagination__item">
@@ -269,13 +262,12 @@
             </li>
           </ul>
         </div>
-
       </section>
-    </main>
-    <footer class="main-footer">
-      <section class="newsletter">
-        <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
-        <p class="newsletter__description">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
+      <section class="newsletter" data-test="subscribe">
+        <div class="newsletter__wrapper">
+          <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
+          <p class="newsletter__description">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
+        </div>
         <form class="newsletter__form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="newsletter__email">
             <span class="visually-hidden">Email.</span>
@@ -285,7 +277,8 @@
           <button class="button apply-button newsletter__button" type="submit">Подписаться</button>
         </form>
       </section>
-
+    </main>
+    <footer class="main-footer">
       <div class="main-footer__wrapper">
         <ul class="main-footer__list social">
           <li class="social__item">
