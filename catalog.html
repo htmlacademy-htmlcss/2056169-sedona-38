@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.svg">
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <a class="main-header__logo logo">
         <img class="logo__image" src="images/header-img/logo.svg" height="70" width="140" alt="Логотип Седоны">
       </a>
@@ -47,7 +47,7 @@
         </div>
       </nav>
     </header>
-    <main class="main-container">
+    <main class="main-container" data-test="main">
       <div class="main-container__wrapper">
         <header class="filter-header">
           <h1 class="filter-header__title">Гостиницы Седоны</h1>
@@ -62,7 +62,7 @@
             </li>
           </ul>
         </header>
-        <section class="catalog-filter">
+        <section class="catalog-filter" data-test="filter">
           <h2 class="visually-hidden">Список гостиниц с фильтрами.</h2>
           <form class="catalog-filter__form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter__group">
@@ -143,7 +143,7 @@
           </form>
         </section>
       </div>
-      <section class="catalog">
+      <section class="catalog" data-test="catalog">
         <div class="catalog__search">
           <h2 class="catalog__offers-found"> Найдено гостиниц: 38</h2>
           <div class="catalog__select-wrapper">
@@ -280,7 +280,7 @@
         </form>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer" data-test="footer">
       <div class="main-footer__wrapper">
         <ul class="main-footer__social-list">
           <span class="visually-hidden">Социальные сети</span>
