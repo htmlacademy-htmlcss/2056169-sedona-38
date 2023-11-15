@@ -5,7 +5,7 @@
     <title>Седона - Главная</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -134,8 +134,8 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
+        <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="main-footer__social-list">
-          <span class="visually-hidden">Социальные сети</span>
           <li class="main-footer__social-item">
             <a class="main-footer__social-link main-footer__social-link--vkontakte" href="#">
               <span class="visually-hidden">Вконтакте</span>
@@ -192,7 +192,7 @@
           <div class="modal__field-group modal__field-group--count">
             <span class="modal__button-group">
               <label class="modal__search-label" for="adults"><span>Взрослые:</span></label>
-              <div class="modal__button-wrapper">
+              <span class="modal__button-wrapper">
                 <button class="button-less modal__button" type="button">
                   <span class="visually-hidden">Уменьшить число</span>
                 </button>
@@ -200,7 +200,7 @@
                 <button class="button-more modal__button" type="button">
                   <span class="visually-hidden">Увеличить число</span>
                 </button>
-              </div>
+              </span>
             </span>
             <span class="modal__button-group">
               <label class="modal__search-label" for="children"><span>Дети:</span></label>
@@ -208,7 +208,7 @@
                 <span class="visually-hidden">Информация</span>
                 <span class="modal__tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               </button>
-                <div class="modal__button-wrapper">
+                <span class="modal__button-wrapper">
                   <button class="button-less modal__button" type="button">
                     <span class="visually-hidden">Уменьшить число</span>
                   </button>
@@ -216,7 +216,7 @@
                   <button class="button-more modal__button" type="button">
                     <span class="visually-hidden">Увеличить число</span>
                   </button>
-                </div>
+                </span>
             </span>
           </div>
           <button class="button apply-button modal__button--submit" type="submit">Найти</button>
