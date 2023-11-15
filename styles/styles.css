@@ -376,9 +376,8 @@ a {
 
 .advantages__titel-wrapper {
   display: grid;
-  padding: 69px 70px 69px;
+  padding: 69px 70px 90px;
   gap: 25px;
-  margin-bottom: 21px;
 }
 
 .advantages__important-description {
@@ -501,7 +500,7 @@ a {
 }
 
 .advantages__recommendations-item .advantages__title {
-  margin: 105px auto 30px;
+  margin: 104px auto 30px;
 }
 
 .advantages__item--housing::before {
