@@ -350,7 +350,7 @@ a {
   background-color: #756157;
   padding: 8px 34px;
   margin: 14px 0;
-  max-width: 160px;
+  max-width: 170px;
 }
 
 .intro {
@@ -932,14 +932,14 @@ a {
 }
 
 .catalog-filter__group {
-  max-width: 141px;
+  max-width: 145px;
   padding: 0;
   margin: 0;
 }
 
 .catalog-filter__group:first-child {
   margin-left: 0;
-  max-width: 150px;
+  max-width: 155px;
 }
 
 .catalog-filter--price {
