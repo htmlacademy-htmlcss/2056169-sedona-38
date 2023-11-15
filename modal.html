@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.svg">
   </head>
   <body class="page__body">
-    <header class="main-header" data-test="header">
+    <header class="main-header">
       <a class="main-header__logo logo">
         <img class="logo__image" src="images/header-img/logo.svg" height="70" width="140" alt="Логотип Седоны">
       </a>
@@ -47,13 +47,13 @@
         </div>
       </nav>
     </header>
-    <main class="main-container" data-test="main">
-      <section class="intro" data-test="hero">
+    <main class="main-container">
+      <section class="intro">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
         <img class="intro__image" src="images/index-img/welcome.svg" height="352" width="458"
           alt="Welcome to the gorgeous sedona, because the grand canyon sucks!">
       </section>
-      <section class="advantages" data-test="advantages">
+      <section class="advantages">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
         <div class="advantages__titel-wrapper">
           <b class="advantages__important-description">Седона — небольшой городок в Аризоне,<br> заслуживающий
@@ -89,7 +89,7 @@
           </li>
         </ul>
       </section>
-      <section class="advantages__service" data-test="service">
+      <section class="advantages__service">
         <div class="advantages__recommendations">
           <b class="advantages__important-description">Приезжайте в Седону отдохнуть <br> в комфорте и уюте!</b>
           <p class="advantages__description advantages__recommendations-description">Опытный персонал и качественное обслуживание!</p>
@@ -110,14 +110,14 @@
           </li>
         </ul>
       </section>
-      <section class="search-hotel" data-test="search">
+      <section class="search-hotel">
         <div class="search-hotel__wrapper">
           <h2 class="search-hotel__title">Заинтересовались?</h2>
           <p class="search-hotel__description">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
         <button class="button search-hotel__button" type="button">Поиск гостиницы в Седоне</button>
       </section>
-      <section class="newsletter newsletter--background" data-test="subscribe">
+      <section class="newsletter newsletter--background">
         <div class="newsletter__wrapper">
           <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
           <p class="newsletter__description">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
@@ -132,7 +132,7 @@
         </form>
       </section>
     </main>
-    <footer class="main-footer" data-test="footer">
+    <footer class="main-footer">
       <div class="main-footer__wrapper">
         <ul class="main-footer__social-list">
           <span class="visually-hidden">Социальные сети</span>
@@ -164,5 +164,64 @@
         </div>
       </div>
     </footer>
+    <div class="modal-container">
+      <div class="modal" data-test="modal">
+        <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+        <button class="modal__button--close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          <div class="modal__field-group">
+            <label class="modal__search-label" for="checkin">
+              <span>Дата заезда:</span>
+            </label>
+            <span class="modal__place-wrapper">
+              <input class="field modal__search-date" id="checkin" name="checkin" type="text" placeholder="Укажите дату" maxlength="35" value="27 апреля 2020" required>
+              <span class="modal__alert modal__alert--error">Мы не можем отправить вас в прошлое.</span>
+            </span>
+          </div>
+          <div class="modal__field-group">
+            <label class="modal__search-label" for="checkout">
+              <span>Дата выезда:</span>
+            </label>
+            <span class="modal__place-wrapper">
+              <input class="field modal__search-date" id="checkout" name="checkout" type="text" placeholder="Укажите дату" maxlength="35" value="1 сентября 2023" required>
+              <span class="modal__alert">На эти даты есть свободные номера. Пока есть.</span>
+            </span>
+          </div>
+          <div class="modal__field-group modal__field-group--count">
+            <span class="modal__button-group">
+              <label class="modal__search-label" for="adults"><span>Взрослые:</span></label>
+              <div class="modal__button-wrapper">
+                <button class="button-less modal__button" type="button">
+                  <span class="visually-hidden">Уменьшить число</span>
+                </button>
+                <input class="field input-number modal__count-input" id="adults" name="adults" type="number" placeholder="1" min="1" max="99" value="2" required>
+                <button class="button-more modal__button" type="button">
+                  <span class="visually-hidden">Увеличить число</span>
+                </button>
+              </div>
+            </span>
+            <span class="modal__button-group">
+              <label class="modal__search-label" for="children"><span>Дети:</span></label>
+              <button class="modal__info" type="button">
+                <span class="visually-hidden">Информация</span>
+                <span class="modal__tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </button>
+                <div class="modal__button-wrapper">
+                  <button class="button-less modal__button" type="button">
+                    <span class="visually-hidden">Уменьшить число</span>
+                  </button>
+                  <input class="field input-number modal__count-input" id="children" name="children" type="number" placeholder="0" min="0" max="99" value="2" required>
+                  <button class="button-more modal__button" type="button">
+                    <span class="visually-hidden">Увеличить число</span>
+                  </button>
+                </div>
+            </span>
+          </div>
+          <button class="button apply-button modal__button--submit" type="submit">Найти</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
